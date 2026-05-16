@@ -11,18 +11,38 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+function createTextTexture(text: string, bgColor: string, textColor: string) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+  const ctx = canvas.getContext("2d");
+  if (ctx) {
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, 512, 512);
+    ctx.fillStyle = textColor;
+    ctx.font = "bold 90px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(text, 256, 256);
+    ctx.fillText(text, 256, 100);
+    ctx.fillText(text, 256, 412);
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  return texture;
+}
+
+const skills = [
+  { text: "Python", bg: "#306998", textCol: "#FFD43B" },
+  { text: "Java", bg: "#f89820", textCol: "#ffffff" },
+  { text: "C++", bg: "#00599C", textCol: "#ffffff" },
+  { text: "JS", bg: "#F7DF1E", textCol: "#000000" },
+  { text: "React", bg: "#61DAFB", textCol: "#20232A" },
+  { text: "HTML", bg: "#E34F26", textCol: "#ffffff" },
+  { text: "CSS", bg: "#1572B6", textCol: "#ffffff" },
+  { text: "MySQL", bg: "#4479A1", textCol: "#ffffff" }
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+const textures = skills.map(skill => createTextTexture(skill.text, skill.bg, skill.textCol));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
@@ -203,7 +223,7 @@ const TechStack = () => {
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />
-        <EffectComposer enableNormalPass={false}>
+        <EffectComposer enableNormalPass={false} multisampling={0}>
           <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
       </Canvas>

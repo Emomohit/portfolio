@@ -6,6 +6,33 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
+const projects = [
+  {
+    name: "EMOAi",
+    category: "Intelligent AI Assistant System",
+    tools: "Python, HTML, APIs, AI Integration",
+    image: "/images/emo_ai.png"
+  },
+  {
+    name: "EMoIQ",
+    category: "AI Productivity & Smart Workflow Platform",
+    tools: "Python, Web Technologies",
+    image: "/images/emoiq.jpg"
+  },
+  {
+    name: "EMO Learners",
+    category: "Educational Resource Platform",
+    tools: "HTML, CSS, JavaScript",
+    image: "/images/emo_learners.png"
+  },
+  {
+    name: "Achievements",
+    category: "Certifications & Activities",
+    tools: "Google Gemini Student Ambassador 2026, Smart India Hackathon",
+    image: "/images/google_ambassador.png"
+  }
+];
+
 const Work = () => {
   useGSAP(() => {
   let translateX: number = 0;
@@ -53,21 +80,21 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={project.image} alt={project.name} />
             </div>
           ))}
         </div>

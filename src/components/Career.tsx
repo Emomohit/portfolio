@@ -15,43 +15,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>B.Tech CS-IT</h4>
+                <h5>Sagar Institute of Science & Technology (SISTec)</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2024 – 2028</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Second-year B.Tech CS-IT student with a strong interest in Artificial Intelligence, software development, and full-stack applications.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Class 12</h4>
+                <h5>MP Board</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2023 – 2024</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Completed Class 12 with a focus on science and foundational mathematics.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Class 10</h4>
+                <h5>MP Board</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2021 – 2022</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Completed Class 10 with strong academic performance.
             </p>
           </div>
         </div>
