@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Second-year B.Tech CS-IT student with a strong interest in Artificial Intelligence, software development, and full-stack applications. Passionate about building real-world AI solutions, modern user experiences, and scalable systems. Experienced in developing AI assistants, productivity platforms, and educational systems using Python, Java, and web technologies. Skilled in problem-solving, UI development, and integrating practical AI features into applications.
+          Hi, I'm Mohit Ahirwar, a Computer Science and Information Technology student passionate about solving real problems with technology. As the founder of EMO Learners, I'm building platforms that help students access study resources, AI-powered learning tools, and career guidance more efficiently. Alongside academics, I serve as a Google Student Ambassador, organizing events, promoting Google technologies, and helping students explore AI, productivity, and career opportunities. My interests include Artificial Intelligence, Python Development, Web Development, Problem Solving, Community Building, and UI/UX Design. I'm actively looking for internship opportunities where I can contribute, learn, and build impactful products. Let's connect and build something meaningful together.
         </p>
       </div>
     </div>
