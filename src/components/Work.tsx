@@ -17,13 +17,6 @@ interface ProjectType {
 
 const staticProjectsTop: ProjectType[] = [
   {
-    name: "EMOVibes",
-    category: "A flagship-grade Android music player with real-time synced lyrics, Listen Together rooms, and adaptive glassmorphism.",
-    tools: "Android, UI/UX, Audio Engine",
-    image: "/images/emovibes.png",
-    link: "https://github.com/Emomohit/EmoVibe"
-  },
-  {
     name: "EMO Learners",
     category: "A comprehensive educational platform designed to empower students with curated resources, interactive learning modules, and a modern UI.",
     tools: "React, TailwindCSS, Web Technologies",
@@ -45,18 +38,25 @@ const staticProjectsTop: ProjectType[] = [
     link: "https://emoos.vercel.app/"
   },
   {
-    name: "AIGP Website",
-    category: "A modern, engaging website built with sleek UI components and clean aesthetics.",
-    tools: "React, Web Technologies",
-    image: "/images/aigp.png",
-    link: "https://aigp-website.vercel.app/"
-  },
-  {
     name: "EmoFinance",
     category: "An AI-powered finance copilot for seamless tracking and insights.",
     tools: "React, Next.js, AI",
     image: "/images/emofinance.png",
     link: "https://github.com/Emomohit/emofinance"
+  },
+  {
+    name: "EMOVibes",
+    category: "A flagship-grade Android music player with real-time synced lyrics, Listen Together rooms, and adaptive glassmorphism.",
+    tools: "Android, UI/UX, Audio Engine",
+    image: "/images/emovibes.png",
+    link: "https://github.com/Emomohit/EmoVibe"
+  },
+  {
+    name: "AIGP Website",
+    category: "A modern, engaging website built with sleek UI components and clean aesthetics.",
+    tools: "React, Web Technologies",
+    image: "/images/aigp.png",
+    link: "https://aigp-website.vercel.app/"
   },
   {
     name: "Emo Games",
@@ -94,7 +94,7 @@ const Work = () => {
         
         const githubProjects = repos
           // Filter out existing ones to avoid duplication
-          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio', 'EmoVibe', 'inkwell', 'movierec', 'emofinance', 'emo-games', 'emoos', 'aigp'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
+          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio', 'EmoVibe', 'inkwell', 'movierec', 'emofinance', 'emo-games', 'emoos', 'aigp', 'emohabit', 'demo'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
           .slice(0, 4) // Show latest 4 GitHub projects so the scroll doesn't get infinitely long
           .map((repo: any) => {
             return {
