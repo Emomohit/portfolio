@@ -36,6 +36,34 @@ const staticProjectsTop: ProjectType[] = [
     tools: "Python, Next.js, APIs",
     image: "/images/emoiq.png",
     link: "https://emolearners.vercel.app/emoiq"
+  },
+  {
+    name: "EMO OS",
+    category: "A sleek, web-based desktop operating system interface.",
+    tools: "Web Technologies, UI/UX",
+    image: "/images/emoos.png",
+    link: "https://emoos.vercel.app/"
+  },
+  {
+    name: "AIGP Website",
+    category: "A modern, engaging website built with sleek UI components and clean aesthetics.",
+    tools: "React, Web Technologies",
+    image: "/images/aigp.png",
+    link: "https://aigp-website.vercel.app/"
+  },
+  {
+    name: "EmoFinance",
+    category: "An AI-powered finance copilot for seamless tracking and insights.",
+    tools: "React, Next.js, AI",
+    image: "/images/emofinance.png",
+    link: "https://github.com/Emomohit/emofinance"
+  },
+  {
+    name: "Emo Games",
+    category: "An ad-free arcade game collection with a beautiful interactive interface.",
+    tools: "HTML, CSS, JS",
+    image: "/images/emogames.png",
+    link: "https://emo-games.vercel.app/"
   }
 ];
 
@@ -66,18 +94,14 @@ const Work = () => {
         
         const githubProjects = repos
           // Filter out existing ones to avoid duplication
-          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio', 'EmoVibe'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
+          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio', 'EmoVibe', 'inkwell', 'movierec', 'emofinance', 'emo-games', 'emoos', 'aigp'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
           .slice(0, 4) // Show latest 4 GitHub projects so the scroll doesn't get infinitely long
           .map((repo: any) => {
-            let thumb = "/images/github_placeholder.png";
-            const lowerName = repo.name.toLowerCase();
-            if (lowerName.includes("inkwell")) thumb = "/images/inkwell_thumb.png";
-            
             return {
              name: repo.name,
              category: repo.description || "Open Source GitHub Repository",
              tools: repo.language || "Various",
-             image: thumb,
+             image: "/images/github_placeholder.png",
              link: repo.html_url
             };
           });
