@@ -27,7 +27,7 @@ const staticProjectsTop: ProjectType[] = [
     name: "EMoIQ",
     category: "An intelligent productivity and smart workflow platform leveraging AI to streamline daily tasks, note-taking, and scheduling.",
     tools: "Python, Next.js, APIs",
-    image: "/images/emoiq.jpg",
+    image: "/images/emoiq.png",
     link: "https://emolearners.vercel.app/emoiq"
   }
 ];
@@ -61,13 +61,19 @@ const Work = () => {
           // Filter out existing ones to avoid duplication
           .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
           .slice(0, 4) // Show latest 4 GitHub projects so the scroll doesn't get infinitely long
-          .map((repo: any) => ({
+          .map((repo: any) => {
+            let thumb = "/images/github_placeholder.png";
+            const lowerName = repo.name.toLowerCase();
+            if (lowerName.includes("inkwell")) thumb = "/images/inkwell_thumb.png";
+            
+            return {
              name: repo.name,
              category: repo.description || "Open Source GitHub Repository",
              tools: repo.language || "Various",
-             image: "/images/placeholder.webp", // Generic placeholder
+             image: thumb,
              link: repo.html_url
-          }));
+            };
+          });
         
         setProjects([...staticProjectsTop, ...githubProjects, ...staticProjectsBottom]);
       })
