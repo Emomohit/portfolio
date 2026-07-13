@@ -17,6 +17,13 @@ interface ProjectType {
 
 const staticProjectsTop: ProjectType[] = [
   {
+    name: "EMOVibes",
+    category: "A flagship-grade Android music player with real-time synced lyrics, Listen Together rooms, and adaptive glassmorphism.",
+    tools: "Android, UI/UX, Audio Engine",
+    image: "/images/emovibes.png",
+    link: "https://github.com/Emomohit/EmoVibe"
+  },
+  {
     name: "EMO Learners",
     category: "A comprehensive educational platform designed to empower students with curated resources, interactive learning modules, and a modern UI.",
     tools: "React, TailwindCSS, Web Technologies",
@@ -59,7 +66,7 @@ const Work = () => {
         
         const githubProjects = repos
           // Filter out existing ones to avoid duplication
-          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
+          .filter(repo => !['EmoIQ', 'EMo-Learners', 'EmoAi', 'portfolio', 'EmoVibe'].some(name => repo.name.toLowerCase().includes(name.toLowerCase())))
           .slice(0, 4) // Show latest 4 GitHub projects so the scroll doesn't get infinitely long
           .map((repo: any) => {
             let thumb = "/images/github_placeholder.png";
